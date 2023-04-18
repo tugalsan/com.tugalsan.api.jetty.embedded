@@ -11,7 +11,7 @@ public class ServerFile {
         var shutdown_token = "shutdown_token";
 
         //create server
-        var server = new Server(new ThreadPoolLoom());
+        var server = new Server(new TS_JettyThreadPool());
         var connector = new ServerConnector(server);
         connector.setPort(port);
         server.setConnectors(new Connector[]{connector});

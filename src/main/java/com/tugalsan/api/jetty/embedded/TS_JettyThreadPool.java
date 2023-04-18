@@ -5,7 +5,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 import org.eclipse.jetty.util.thread.ThreadPool;
 
-public class ThreadPoolLoom implements ThreadPool {
+public class TS_JettyThreadPool implements ThreadPool {
 
     private ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor();
 

@@ -21,7 +21,7 @@ public class ServerWeb {
         var resource = Path.of("C:\\me\\codes\\com.tugalsan\\tst\\hello-world-embedded-jetty-maven\\static");
 
         //create server
-        var server = new Server(new ThreadPoolLoom());
+        var server = new Server(new TS_JettyThreadPool());
         var connector = new ServerConnector(server);
         connector.setPort(port);
         server.setConnectors(new Connector[]{connector});
