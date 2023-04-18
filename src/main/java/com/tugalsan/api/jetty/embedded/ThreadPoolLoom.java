@@ -15,7 +15,7 @@ public class ThreadPoolLoom implements ThreadPool {
     }
 
     @Override
-    public void run(Runnable command) {
+    public void execute(Runnable command) {
         executorService.submit(command);
     }
 

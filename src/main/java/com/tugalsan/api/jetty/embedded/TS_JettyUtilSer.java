@@ -29,7 +29,7 @@ public class TS_JettyUtilSer {
             }
 
             @Override
-            public void run(Runnable command) {
+            public void execute(Runnable command) {
                 executorService.submit(command);
             }
 
