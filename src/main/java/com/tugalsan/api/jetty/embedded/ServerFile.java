@@ -1,5 +1,6 @@
 package com.tugalsan.api.jetty.embedded;
 
+import com.tugalsan.api.unsafe.client.TGS_UnSafe;
 import org.eclipse.jetty.server.*;
 import org.eclipse.jetty.server.handler.*;
 
@@ -34,13 +35,16 @@ public class ServerFile {
 //        server.setHandler(handler);
 
         // Start the server! 🚀
+        TGS_UnSafe.run(()->{
+        });
         try {
             server.start();
             System.out.println("Server started @ " + port);
-        } catch (Exception ex) {
+        } catch (Exception e) {
             server.stop();
             System.out.println("Server failed @ " + port);
-            throw ex;
+//            TGS_UnSafe.throwIfInterruptedException(e);
+            TGS_UnSafe.thrw(e);
         }
         server.join();
     }
