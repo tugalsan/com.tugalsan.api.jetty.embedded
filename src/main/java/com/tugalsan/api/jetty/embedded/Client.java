@@ -20,7 +20,7 @@ public class Client {
         var httpClient = new HttpClient();
         httpClient.getProxyConfiguration().getProxies().add(new HttpProxy("localhost", 8888));
 //        httpClient.getProxyConfiguration().addProxy(new HttpProxy("localhost", 8888));
-        WebSocketClient webSocketClient = new WebSocketClient(httpClient);
+        var webSocketClient = new WebSocketClient(httpClient);
         webSocketClient.setMaxTextMessageSize(8 * 1024);
         webSocketClient.start();
     }

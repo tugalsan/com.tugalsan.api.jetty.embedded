@@ -47,7 +47,7 @@ public class ServerWeb {
         //http://localhost:8080/shutdown?token=shutdown_token
         var handlers = new HandlerList();
         handlers.setHandlers(new Handler[]{
-            new ShutdownHandler("shutdown_token", false, false),
+            new ShutdownHandler(shutdown_token, false, false),
             new DefaultHandler(),
             handler
         });

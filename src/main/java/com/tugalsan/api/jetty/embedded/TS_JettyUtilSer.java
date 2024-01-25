@@ -21,7 +21,7 @@ public class TS_JettyUtilSer {
 //        var threadPool = new QueuedThreadPool();
 //        threadPool.setVirtualThreadsExecutor(Executors.newVirtualThreadPerTaskExecutor());
         var server = new Server(new ThreadPool() {
-            private ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor();
+            private final ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor();
 
             @Override
             public void join() throws InterruptedException {

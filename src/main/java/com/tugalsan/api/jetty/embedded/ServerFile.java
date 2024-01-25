@@ -27,7 +27,7 @@ public class ServerFile {
         //http://localhost:9082/shutdown?token=shutdown_token
         var handlers = new HandlerList();
         handlers.setHandlers(new Handler[]{
-            new ShutdownHandler("shutdown_token", false, false),
+            new ShutdownHandler(shutdown_token, false, false),
             new DefaultHandler(),
             handler
         });

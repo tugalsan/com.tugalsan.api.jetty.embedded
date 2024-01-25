@@ -7,7 +7,7 @@ import org.eclipse.jetty.util.thread.ThreadPool;
 
 public class TS_JettyThreadPool implements ThreadPool {
 
-    private ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor();
+    private final ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor();
 
     @Override
     public void join() throws InterruptedException {
