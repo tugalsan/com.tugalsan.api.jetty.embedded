@@ -4,7 +4,7 @@ import java.nio.file.Path;
 
 public class Run {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         TS_JettyServer.main(8443, Path.of("D:\\xampp_data\\SSL\\tomcat.p12"), "MyPass");
     }
 

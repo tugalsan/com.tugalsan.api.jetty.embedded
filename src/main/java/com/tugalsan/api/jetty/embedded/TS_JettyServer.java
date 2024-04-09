@@ -25,7 +25,7 @@ import org.eclipse.jetty.webapp.WebAppContext;
 //https://www.eclipse.org/jetty/documentation/jetty-11/programming_guide.php
 public class TS_JettyServer {
 
-    public static void main(int port, Path keyPath, String keyPass) throws Exception {
+    public static void main(int port, Path keyPath, String keyPass)  {
         var server = TS_JettyUtilSer.createServer(port, keyPath, keyPass);
 
         var contextCollection = new ContextHandlerCollection();

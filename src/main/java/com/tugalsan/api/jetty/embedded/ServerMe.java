@@ -7,7 +7,7 @@ import org.eclipse.jetty.webapp.WebAppContext;
 
 public class ServerMe {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         var webResourceBase = Path.of("C:\\me\\codes\\com.tugalsan\\tst\\hello-world-embedded-jetty-maven\\static");
         var port = 8080;
         System.err.println("Using BaseResource: " + webResourceBase);

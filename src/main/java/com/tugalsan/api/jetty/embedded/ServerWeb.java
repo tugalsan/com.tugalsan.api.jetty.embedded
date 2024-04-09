@@ -1,6 +1,5 @@
 package com.tugalsan.api.jetty.embedded;
 
-import com.tugalsan.api.unsafe.client.TGS_UnSafe;
 import java.nio.file.Path;
 import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Handler;
@@ -13,7 +12,7 @@ import org.eclipse.jetty.webapp.WebAppContext;
 
 public class ServerWeb {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
 
         //config
         var embedded = true;
@@ -55,15 +54,8 @@ public class ServerWeb {
         server.setHandler(handler);
 
         // Start the server! 🚀
-        try {
-            server.start();
-            System.out.println("Server started @ " + port);
-        } catch (Exception e) {
-            server.stop();
-            System.out.println("Server failed @ " + port);
-//            TGS_UnSafe.throwIfInterruptedException(e);
-            TGS_UnSafe.thrw(e);
-        }
+        server.start();
+        System.out.println("Server started @ " + port);
         server.join();
     }
 }

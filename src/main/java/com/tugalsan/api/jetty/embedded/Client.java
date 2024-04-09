@@ -11,12 +11,12 @@ import org.eclipse.jetty.websocket.client.WebSocketClient;
 
 public class Client {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
     }
 
     //https://www.eclipse.org/jetty/documentation/jetty-11/programming_guide.php
-    public void websocketClient2() throws Exception {
+    public void websocketClient2() {
         var httpClient = new HttpClient();
         httpClient.getProxyConfiguration().getProxies().add(new HttpProxy("localhost", 8888));
 //        httpClient.getProxyConfiguration().addProxy(new HttpProxy("localhost", 8888));
@@ -26,28 +26,28 @@ public class Client {
     }
 
     //https://www.eclipse.org/jetty/documentation/jetty-11/programming_guide.php
-    public void websocketClient1() throws Exception {
+    public void websocketClient1() {
         var webSocketClient = new WebSocketClient();
         webSocketClient.setMaxTextMessageSize(8 * 1024);
         webSocketClient.start();
     }
 
     //https://www.eclipse.org/jetty/documentation/jetty-11/programming_guide.php
-    public void http3Client() throws Exception {
+    public void http3Client()  {
         var http3Client = new HTTP3Client();
         http3Client.getHTTP3Configuration().setStreamIdleTimeout(15000);
         http3Client.start();
     }
 
     //https://www.eclipse.org/jetty/documentation/jetty-11/programming_guide.php
-    public void http2Client() throws Exception {
+    public void http2Client()  {
         var http2Client = new HTTP2Client();
         http2Client.setStreamIdleTimeout(15000);
         http2Client.start();
     }
 
     //https://www.eclipse.org/jetty/documentation/jetty-11/programming_guide.php
-    public void httpsClient() throws Exception {
+    public void httpsClient() {
         var sslContextFactory = new SslContextFactory.Client();
         sslContextFactory.setEndpointIdentificationAlgorithm(null);
         var clientConnector = new ClientConnector();
