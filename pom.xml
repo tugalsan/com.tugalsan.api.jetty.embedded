@@ -31,19 +31,19 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-server</artifactId>
-            <version>11.0.5</version>
+            <version>11.0.19</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlets</artifactId>
-            <version>11.0.5</version>
+            <version>11.0.16</version>
         </dependency>
         
 
         <dependency>
             <groupId>org.eclipse.jetty.http2</groupId>
             <artifactId>http2-server</artifactId>
-            <version>11.0.13</version>
+            <version>11.0.16</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty.http3</groupId>
@@ -54,14 +54,14 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-alpn-server</artifactId>
-            <version>11.0.13</version>
+            <version>11.0.16</version>
         </dependency>
 
         
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-client</artifactId>
-            <version>11.0.8</version>
+            <version>11.0.16</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty.http2</groupId>
@@ -83,7 +83,7 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-util</artifactId>
-            <version>11.0.13</version>
+            <version>11.0.19</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
@@ -124,7 +124,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.5.3</version>
+                <version>3.6.0</version>
                 <configuration>
                     <filters>
                         <filter>
