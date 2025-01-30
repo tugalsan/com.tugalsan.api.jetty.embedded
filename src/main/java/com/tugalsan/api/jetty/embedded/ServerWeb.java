@@ -42,7 +42,7 @@ public class ServerWeb {
 //                "org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern",
 //                ".*/target/classes/|.*\\.jar"
 //        );
-////        handler.addServlet(HelloWorldServlet.class, "/hello");
+        ////        handler.addServlet(HelloWorldServlet.class, "/hello");
         //add handlers
         //http://localhost:8080/shutdown?token=shutdown_token
         var handlers = new HandlerList();
@@ -59,6 +59,7 @@ public class ServerWeb {
             server.start();
             System.out.println("Server started @ " + port);
         } catch (Exception e) {
+            TGS_UnSafe.throwIfInterruptedException(e);
             server.stop();
             System.out.println("Server failed @ " + port);
 //            TGS_UnSafe.throwIfInterruptedException(e);

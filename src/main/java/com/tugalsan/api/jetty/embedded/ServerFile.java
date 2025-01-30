@@ -35,12 +35,13 @@ public class ServerFile {
 //        server.setHandler(handler);
 
         // Start the server! 🚀
-        TGS_UnSafe.run(()->{
+        TGS_UnSafe.run(() -> {
         });
         try {
             server.start();
             System.out.println("Server started @ " + port);
         } catch (Exception e) {
+            TGS_UnSafe.throwIfInterruptedException(e);
             server.stop();
             System.out.println("Server failed @ " + port);
 //            TGS_UnSafe.throwIfInterruptedException(e);
