@@ -1,6 +1,8 @@
 package com.tugalsan.api.jetty.embedded;
 
-import com.tugalsan.api.unsafe.client.TGS_UnSafe;
+import com.tugalsan.api.function.client.TGS_FuncUtils;
+import com.tugalsan.api.function.client.maythrow.checkedexceptions.TGS_FuncMTCEUtils;
+import com.tugalsan.api.function.client.maythrow.uncheckedexceptions.TGS_FuncMTUCEUtils;
 import org.eclipse.jetty.server.*;
 import org.eclipse.jetty.server.handler.*;
 
@@ -35,17 +37,17 @@ public class ServerFile {
 //        server.setHandler(handler);
 
         // Start the server! 🚀
-        TGS_UnSafe.run(() -> {
+        TGS_FuncMTCEUtils.run(() -> {
         });
         try {
             server.start();
             System.out.println("Server started @ " + port);
         } catch (Exception e) {
-            TGS_UnSafe.throwIfInterruptedException(e);
+            TGS_FuncUtils.throwIfInterruptedException(e);
             server.stop();
             System.out.println("Server failed @ " + port);
-//            TGS_UnSafe.throwIfInterruptedException(e);
-            TGS_UnSafe.thrw(e);
+//            TGS_FuncUtils.throwIfInterruptedException(e);
+            TGS_FuncMTUCEUtils.thrw(e);
         }
         server.join();
     }
