@@ -1,4 +1,4 @@
-package com.tugalsan.api.jetty.embedded;
+package com.tugalsan.api.jetty.embedded.server;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;

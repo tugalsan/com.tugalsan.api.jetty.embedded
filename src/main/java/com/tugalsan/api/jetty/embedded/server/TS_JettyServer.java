@@ -1,4 +1,4 @@
-package com.tugalsan.api.jetty.embedded;
+package com.tugalsan.api.jetty.embedded.server;
 
 import jakarta.servlet.DispatcherType;
 import jakarta.servlet.ServletException;

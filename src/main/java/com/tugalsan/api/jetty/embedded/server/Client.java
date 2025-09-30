@@ -1,4 +1,4 @@
-package com.tugalsan.api.jetty.embedded;
+package com.tugalsan.api.jetty.embedded.server;
 
 import org.eclipse.jetty.client.HttpClient;
 import org.eclipse.jetty.client.HttpProxy;
